@@ -1,0 +1,90 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ubicacion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Agrega el enlace para Font Awesome -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: mintcream; /* Cambia el color del fondo */
+        }
+        header {
+            background-color: beige; /* Cambia el color de la barra de navegación */
+            color: purple; /* Cambia el color del texto en la barra de navegación */
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0; /* Elimina el margen */
+            display: flex; /* Muestra los elementos en línea */
+            justify-content: center; /* Centra los elementos horizontalmente */
+        }
+        nav ul li {
+            /* Elimina display: inline; */
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: purple;
+            text-decoration: none;
+        }
+        .container {
+            padding: 20px;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        #map { 
+            height: 500px; /* Aumenta la altura del mapa */
+            width: 100%; /* Asegura que el mapa ocupe todo el ancho disponible */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+              <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="Galeria3.html"><i class="fas fa-images"></i> Galería</a></li>
+            <li><a href="Quienes%20Somos3.html"><i class="fas fa-users"></i> Quiénes Somos</a></li>
+            <li><a href="Que%20Asemos3.html"><i class="fas fa-tasks"></i> Qué Hacemos</a></li>
+            <li><a href="Fondos.html"><i class="fas fa-money-bill-wave"></i> Fondos</a></li>
+            <li><a href="Ubicacion3.html"><i class="fas fa-map-marker-alt"></i> Ubicación</a></li>
+            <li><a href="Video3.html"><i class="fas fa-video"></i> Video</a></li>
+           </ul>
+        </nav>
+    </header>
+
+    <h1>Mi Ubicación</h1>
+    <!-- Aquí incrustamos el mapa Leaflet -->
+    <div id="map"></div>
+
+    <!-- Incluye la biblioteca de Leaflet y tu código JavaScript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Inicializa el mapa con las coordenadas de Río Lindo, Cortés, Honduras
+        var map = L.map('map').setView([15.044122, -87.958853], 13); // Coordenadas de Río Lindo, Cortés, Honduras
+
+        // Añade una capa de mapa base (puedes usar diferentes proveedores de mapas)
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // Añade un marcador en la ubicación de Río Lindo, Cortés, Honduras
+        L.marker([15.044122, -87.958853]).addTo(map)
+            .bindPopup('¡Hola! Esta es la ubicación de Río Lindo, Cortés, Honduras.')
+            .openPopup();
+    </script>
+</body>
+</html>

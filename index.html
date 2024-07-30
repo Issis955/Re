@@ -1,0 +1,128 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refugio IMSA My amigo fiel</title>
+    <!-- Incluir Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Estilos CSS aquí */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #dbf1e3; /* Fondo verde menta suave */
+        }
+        header {
+            background-color: #dbf1e3; /* Fondo verde menta suave */
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: beige; /* Color beige */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Alinea horizontalmente los elementos */
+        }
+        nav li {
+            margin: 0 10px;
+        }
+        nav a {
+            color: purple; /* Cambiar el color del texto a morado */
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            background-color: #dbf1e3; /* Fondo verde menta suave */
+        }
+        footer {
+            background-color: beige; /* Color beige */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
+        }
+        .welcome-container {
+            text-align: center;
+            background-color: #dbf1e3; /* Fondo verde menta suave */
+            padding: 20px;
+        }
+        .welcome-container h2 {
+            margin-bottom: 10px; /* Espacio entre el título y el párrafo */
+        }
+        .logo {
+            animation: rotate 5s linear forwards, fadeInOut 7s linear 5s forwards;
+            background-color: #dbf1e3; /* Fondo verde menta suave */
+            padding: 20px;
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Refugio IMSA My amigo fiel</h1>
+        <!-- Agrega tu logotipo aquí con una clase para estilizarlo -->
+        <img src="C:\Users\issis\Downloads\logo3.jpg" alt="Refugio IMSA" class="logo">
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="Galeria3.html"><i class="fas fa-images"></i> Galería</a></li>
+            <li><a href="Quienes%20Somos3.html"><i class="fas fa-users"></i> Quiénes Somos</a></li>
+            <li><a href="Que%20Asemos3.html"><i class="fas fa-tasks"></i> Qué Hacemos</a></li>
+            <li><a href="Fondos.html"><i class="fas fa-money-bill-wave"></i> Fondos</a></li>
+            <li><a href="Ubicacion3.html"><i class="fas fa-map-marker-alt"></i> Ubicación</a></li>
+            <li><a href="Video3.html"><i class="fas fa-video"></i> Video</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div class="welcome-container">
+            <h2>Bienvenido a nuestro Refugio donde seremos Tu Amigo Fiel</h2>
+            <p>My Corazon Esta Lleno De Huellas.</p>
+        </div>
+    </section>
+    <footer>
+        <!-- Agregar icono de redes sociales con nombres -->
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <p>&copy; 2024 Tu Amigo Fiel</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var nav = document.querySelector('nav');
+            nav.style.display = nav.style.display === 'none' ? 'block' : 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My refugio imsa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Estilo para la barra de navegación */
+        header {
+            background-color: beige; /* Color beige para la barra de navegación */
+            color: white;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: purple;
+            text-decoration: none;
+        }
+
+        /* Estilo para la sección de bienvenida */
+        .welcome-section {
+            background-color:#dbf1e3; /* Color verde menta para la sección de bienvenida */
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Estilo para la galería */
+        .gallery-container {
+            overflow-x: scroll;
+            white-space: nowrap;
+            margin: 20px 0;
+        }
+        .gallery {
+            display: inline-block;
+            white-space: normal;
+            margin-right: 10px;
+        }
+        .gallery img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+               <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="Galeria3.html"><i class="fas fa-images"></i> Galería</a></li>
+            <li><a href="Quienes%20Somos3.html"><i class="fas fa-users"></i> Quiénes Somos</a></li>
+            <li><a href="Que%20Asemos3.html"><i class="fas fa-tasks"></i> Qué Hacemos</a></li>
+            <li><a href="Fondos.html"><i class="fas fa-money-bill-wave"></i> Fondos</a></li>
+            <li><a href="Ubicacion3.html"><i class="fas fa-map-marker-alt"></i> Ubicación</a></li>
+            <li><a href="Video3.html"><i class="fas fa-video"></i> Video</a></li>
+         </ul>
+        </nav>
+    </header>
+
+    <div class="welcome-section">
+        <!-- Aquí va el contenido de la sección de bienvenida -->
+        <h1>Bienvenidos a nuestra galeria </h1>
+        <!-- Agrega el contenido que desees -->
+    </div>
+
+    <div class="gallery-container">
+        <div class="gallery">
+            <img src="   C:\Users\issis\Downloads\WhatsApp Image 2024-06-05 at 12.39.54 AM (1).jpeg " alt="Descripción de la imagen 1">
+        <img src="C:\Users\issis\Downloads\c.jpg" alt="Descripción de la imagen 2">
+ <img src="C:\Users\issis\Downloads\d.jpg" alt="Descripción de la imagen 3">
+ <img src="C:\Users\issis\Downloads\e.jpg" alt="Descripción de la imagen 4">
+ <img src="C:\Users\issis\Downloads\f.jpg" alt="Descripción de la imagen 5">
+ <img src="C:\Users\issis\Downloads\g.jpg" alt="Descripción de la imagen 6">
+ <img src="C:\Users\issis\Downloads\h.jpg" alt="Descripción de la imagen 7">
+ <img src="C:\Users\issis\Downloads\i.jpg" alt="Descripción de la imagen 8">
+ <img src="C:\Users\issis\Downloads\j.jpg" alt="Descripción de la imagen 9">
+ <img src="C:\Users\issis\Downloads\k.jpg" alt="Descripción de la imagen 10">
+ <img src="C:\Users\issis\Downloads\l.jpg" alt="Descripción de la imagen 11">
+ <img src="C:\Users\issis\Downloads\m.jpg" alt="Descripción de la imagen 12">
+ <img src="C:\Users\issis\Downloads\n.jpg" alt="Descripción de la imagen 13">
+ <img src="C:\Users\issis\Downloads\ñ.jpg" alt="Descripción de la imagen 14">
+ <img src="C:\Users\issis\Downloads\o.jpg" alt="Descripción de la imagen 15">
+ <img src="C:\Users\issis\Downloads\p.jpg" alt="Descripción de la imagen 16">
+ <img src="C:\Users\issis\Downloads\q.jpg" alt="Descripción de la imagen 17">
+ <img src="C:\Users\issis\Downloads\r.jpg" alt="Descripción de la imagen 18">
+ <img src="C:\Users\issis\Downloads\s.jpg" alt="Descripción de la imagen 19">
+ <img src="C:\Users\issis\Downloads\t.jpg" alt="Descripción de la imagen 20">
+ <img src="C:\Users\issis\Downloads\a.jpg" alt="Descripción de la imagen 21">
+<img src="C:\Users\issis\Downloads\b.jpg" alt="Descripción de la imagen 22">
+        <!-- Agrega más imágenes con la misma estructura -->
+        </div>
+    </div>
+
+    <div class="lightbox">
+        <img src="" alt="Imagen en lightbox">
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.gallery img');
+        const lightbox = document.querySelector('.lightbox');
+        const lightboxImg = document.querySelector('.lightbox img');
+
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = image.src;
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Refugio IMSA</title>
+    <style>
+        /* Estilos para la página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:  #dbf1e3; /* Verde menta suave */
+        }
+        header {
+            background-color: beige; /* Color beige para la barra de navegación */
+            color: #6a0dad; /* Color morado para el texto en la barra de navegación */
+            padding: 10px 0;
+            text-align: center;
+        }
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        header nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        header nav ul li a {
+            text-decoration: none;
+            color: #6a0dad; /* Color morado para los enlaces en la barra de navegación */
+        }
+        /* Estilos específicos para la sección de fondos */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .fondos-section {
+            padding: 50px 0;
+            background-color: #dbf1e3;
+            color: #333;
+            text-align: center;
+        }
+        .fondos-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .fondos-section p {
+            font-size: 18px;
+        }
+        /* Estilos para el formulario de donación */
+        .donation-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .donation-form label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .donation-form input[type="text"],
+        .donation-form input[type="email"],
+        .donation-form select,
+        .donation-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .donation-form input[type="submit"] {
+            background-color: #6a0dad; /* Color morado para el botón de donar */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .donation-form input[type="submit"]:hover {
+            background-color: #4d0082; /* Cambia el color al hacer hover */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Refugio IMSA</h1>
+        <nav>
+            <ul>
+               <li><a href="index.html"><i class="fas fa-home"></i> Inicio</a></li>
+            <li><a href="Galeria3.html"><i class="fas fa-images"></i> Galería</a></li>
+            <li><a href="Quienes%20Somos3.html"><i class="fas fa-users"></i> Quiénes Somos</a></li>
+            <li><a href="Que%20Asemos3.html"><i class="fas fa-tasks"></i> Qué Hacemos</a></li>
+            <li><a href="Fondos.html"><i class="fas fa-money-bill-wave"></i> Fondos</a></li>
+            <li><a href="Ubicacion3.html"><i class="fas fa-map-marker-alt"></i> Ubicación</a></li>
+            <li><a href="Video3.html"><i class="fas fa-video"></i> Video</a></li>
+        </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section class="fondos-section">
+            <h2>Nuestros Fondos</h2>
+            <p>Descubre nuestra colección de fondos de los animales que ayudamos:</p>
+            <ul>
+                <p>Fondos de perros rescatados de la calle.</p>
+                <p>Fondos de gatos abandonados buscando un hogar.</p>
+                <p>Fondos de caballos maltratados que necesitan cuidado.</p>
+                <p>Fondos de aves exóticas recuperadas de situaciones de tráfico ilegal.</p>
+                <!-- Agrega más información sobre otros animales que ayudan -->
+            </ul>
+        </section>
+
+        <div class="donation-form">
+            <h2>¡Dona para ayudar a nuestros amigos fieles!</h2>
+            <form action="procesar_dona.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="cantidad">Cantidad a donar:</label>
+                <select id="cantidad" name="cantidad" required>
+                    <option value="10">$10</option>
+                    <option value="20">$20</option>
+                    <option value="50">$50</option>
+                    <option value="100">$100</option>
+                    <!-- Agrega más opciones si lo deseas -->
+                </select>
+
+                <label for="mensaje">Mensaje (opcional):</label>
+                <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+
+                <input type="submit" value="Donar">
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <!-- Agrega tu información de contacto u otros elementos de pie de página aquí -->
+    </footer>
+
+</body>
+</html>
